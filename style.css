@@ -1,0 +1,238 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_bar {
+    background-color: rgb(223,174,177);
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+}
+
+.nav_bar li a {
+    text-decoration: none;
+    color: white;
+   
+}
+
+.nav_bar li {
+    display: inline-block;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+   
+}
+
+.title_page {
+    background-image: url('backgroundPhoto.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    
+}
+
+/*Gives the pink overlay*/
+.title_page::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.5); /* Light pink overlay with 50% opacity */
+    pointer-events: none; /* Allow clicks to pass through to the content */
+    z-index: 1;
+}
+
+.title {
+    position: relative;
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    line-height: 0.9;
+    z-index: 2;
+}
+
+/*mess around with the margin-lefts*/
+#header1 {
+    width: 400px;
+    margin-top: 270px;
+    margin-left: -380px;
+}
+#header2{
+    width: 200px;
+    margin-left: -380px;
+    
+}
+
+/*specifically for the text to fade in, nothing else*/
+.fade-in-text {
+    animation: fadeIn 2.5s;
+    
+    /*For the headers "Poonam" and Spa" their position is placed in the header1&2 ids*/
+    font-family:  Chancery, cursive;
+    font-size: 17vh;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.about_background {
+    min-height: 115vh;
+
+}
+#about_background_title {
+    text-align: center;
+    padding-top: 2vh;
+    color: rgba(223,174,177);
+    font-family:  Chancery, cursive;
+    font-size: 25px;
+}
+
+.about_box {
+    background-color: rgba(223,174,177,0.8);
+    height: 85vh; /* Adjust the height as needed */
+    width: 90vw; /* Adjust the width as needed */
+    margin: auto;
+    border-radius: 15px;
+    /*adjustment of the boxes in the about_box*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#profile_photo, #bio{
+    width: 500px;
+    height: 570px;
+    margin: 0px 20px;
+}
+
+#profile_photo {
+    background-image: url('poonamProfilePic.JPG');
+    background-size: contain;
+    width: 388px;
+}
+
+#bio p{
+    margin-top: 50px;
+    font-size: 20px;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    text-align: center;
+    line-height: 30px;
+}
+
+.services_background {
+    background-color: rgba(223,174,177,0.8);
+    min-height: 115vh;
+
+}
+
+#services_background_title {
+    text-align: center;
+    color: #f8f1f0;
+    padding-top: 3vh;
+    font-family:  Chancery, cursive;
+    font-size: 25px;
+}
+
+.dropdown_box {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*dropdown menu css, got it from public website so don't really know how it works*/
+span {
+    padding: 30px;
+    background: rgb(248,231,255); 
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+  
+.slide {
+    clear: both;
+    list-style-type: none;
+    width: 95%;
+    height: 0px;
+    overflow: hidden;
+    transition: height .6s ease;
+}
+  
+.slide li {
+    padding: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: rgb(248,231,255) ;
+}
+
+
+#touch1, #touch2, #touch3, #touch4, #touch5 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+    
+#touch1:checked ~ .slide {
+    height: 650px;
+}
+
+#touch2:checked ~ .slide {
+    height: 320px;
+}
+
+#touch3:checked ~ .slide {
+    height: 235px;
+}
+
+#touch4:checked ~ .slide {
+    height: 150px;
+}
+
+#touch5:checked ~ .slide {
+    height: 100px;
+}
+
+/* room picture */
+
+.pic {
+    height: 86vh;
+    width: 100vw;
+    background-image: url('outsideBuilding.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(248,231,255);
+}
+
+
+#Contact {
+    padding: 10px;
+    background-color: rgb(248,231,255);
+    text-align: center;
+}
+
+#Contact li {
+    display: inline-block;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    border-left: 2px solid black;
+    padding-left: 0.3em;
+}
