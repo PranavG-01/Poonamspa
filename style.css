@@ -30,6 +30,15 @@ body {
    
 }
 
+#number {
+    color: white;
+    position: absolute; /* This positions the element absolutely relative to its nearest positioned ancestor */
+    left: 0; /* Aligns the element to the far left */
+    top: 0; /* Adjust this to position the number vertically as needed */
+    margin-left: 10px; /* Optional: Adds a small margin if you don't want it flush with the left edge */
+}
+
+
 .title_page {
     background-image: url('backgroundPhoto.png');
     background-repeat: no-repeat;
@@ -65,14 +74,21 @@ body {
 
 /*mess around with the margin-lefts*/
 #header1 {
-    width: 400px;
+    width: 900px;
     margin-top: 270px;
     margin-left: -380px;
+    font-size: 17vh;
 }
 #header2{
-    width: 200px;
+    width: 700px;
     margin-left: -380px;
+    font-size: 10vh;
     
+}
+#header3{
+    font-size: 5vh;
+    margin-left: -460px;
+    padding-top: 20px;
 }
 
 /*specifically for the text to fade in, nothing else*/
@@ -81,7 +97,6 @@ body {
     
     /*For the headers "Poonam" and Spa" their position is placed in the header1&2 ids*/
     font-family:  Chancery, cursive;
-    font-size: 17vh;
 }
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -116,18 +131,18 @@ body {
 
 #profile_photo, #bio{
     width: 500px;
-    height: 570px;
+    height: 517px;
     margin: 0px 20px;
 }
 
 #profile_photo {
-    background-image: url('poonamProfilePic.JPG');
+    background-image: url('Poonam_prof.JPG');
     background-size: contain;
     width: 388px;
 }
 
 #bio p{
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 20px;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
@@ -166,7 +181,26 @@ span {
     display: block;
     border-radius: 10px;
 }
-  
+
+.wrap-content {
+    display: flex;
+    background-color: rgb(248,231,255) ;
+}
+
+#room_pic {
+    background-image: url('interior1.JPG');
+    background-size: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.wrap-content ul {
+    list-style: none;
+}
+
 .slide {
     clear: both;
     list-style-type: none;
@@ -178,28 +212,28 @@ span {
   
 .slide li {
     padding: 30px;
-    text-align: center;
+    text-align: left;
     font-size: 1.2em;
     background-color: rgb(248,231,255) ;
 }
 
 
-#touch1, #touch2, #touch3, #touch4, #touch5 {
+#touch1, #touch2, #touch3, #touch4, #touch5, #touch6 {
     position: absolute;
     opacity: 0;
     height: 0px;
 }
     
 #touch1:checked ~ .slide {
-    height: 650px;
+    height: 950px;
 }
-
+  
 #touch2:checked ~ .slide {
     height: 320px;
 }
 
 #touch3:checked ~ .slide {
-    height: 235px;
+    height: 315px;
 }
 
 #touch4:checked ~ .slide {
@@ -209,6 +243,11 @@ span {
 #touch5:checked ~ .slide {
     height: 100px;
 }
+
+#touch6:checked ~ .slide {
+    height: 100px;
+}
+
 
 /* room picture */
 
