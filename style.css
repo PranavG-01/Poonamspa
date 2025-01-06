@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    
 }
 
 header {
@@ -45,8 +46,10 @@ header nav ul li a {
 
 /* Title Section */
 .title-section {
-    background: url('backgroundPhoto.png') no-repeat center center/cover;
-    height: 100vh;
+    background: url('backgroundPhoto.png') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the section */
+    min-height: 50vh; /* Sets a minimum height to prevent shrinking too much */
+    height: 120vh; /* Ensures it fills the viewport height */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -57,6 +60,25 @@ header nav ul li a {
     padding-left: 50px;
     position: relative;
 }
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .title-section {
+        height: auto; /* Allow dynamic height for better responsiveness */
+        min-height: 70vh; /* Increase the minimum height for small screens */
+        padding: 10% 20px; /* Adjust padding to fit smaller screens */
+        text-align: center; /* Center-align content on small screens */
+    }
+
+    .title-section h1 {
+        font-size: 50px; /* Reduce font size for smaller screens */
+    }
+
+    .title-section p {
+        font-size: 25px; /* Adjust font size for the subtitle */
+    }
+}
+
 
 /* Light pink overlay */
 .title-section::before {
@@ -83,7 +105,7 @@ header nav ul li a {
 /* Apply fade-in animation to title */
 .title-section h1 {
     font-family: 'Brush Script MT', cursive;
-    font-size: 130px;
+    font-size: 100px;
     margin: 0;
     position: relative;
     z-index: 1;
@@ -122,6 +144,7 @@ header nav ul li a {
 .about-image img {
     width: 100%;
     height: auto;
+    align-self: center;
 }
 
 /* Services Section */
