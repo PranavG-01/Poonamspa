@@ -1,147 +1,153 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="keywords" content="Poonam, Wason, Spa, Louisville, Luxury">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pure Luxury Spa</title>
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<script>
+    function toggleService(element) {
+        const parent = element.parentElement;
+        const allServices = document.querySelectorAll('.service');
+
+        // Close all other open services
+        allServices.forEach(service => {
+            if (service !== parent) {
+                service.classList.remove('open');
+            }
+        });
+
+        // Toggle the clicked service
+        parent.classList.toggle('open');
+
+        function toggleService(element) {
+            // Get the parent 'service' div
+            const service = element.parentElement;
+            // Toggle the 'open' class to show/hide the details and image
+            service.classList.toggle("open");
+        }
+    }
+</script>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="nav_bar">
-        <li id="number">Call or Text: 502-417-7137</li>
-        <li><a href="#about_background_title">About</a></li>
-        <li><a href="#services_background_title">Services</a></li>
-        <li style="padding-right: 30px;"><a href="#Contact">Contact</a></li>
-    </div>
+    <!-- Title Section -->
+    <section id="title" class="title-section">
+        <h1>Pure Luxury Spa</h1>
+        <p>Poonam's Spa</p>
+    </section>
 
-    <div class = "title_page">
-        <div class = "title">
-            <header class = "fade-in-text" id="header1">
-                Pure Luxury Spa
-            </header>
-            <header class = "fade-in-text" id="header2">
-                Poonam's Spa
-            </header>
-            <header class = "fade-in-text" id="header3">
-                11400 Main Street, Middletown, KY 40243
-            </header>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-description">
+            <h2 class="section-title">About Me</h2>
+            <p>
+            As an esthetician with over 17 years of experience, Poonam brings her passion for skincare to every treatment. 
+            With roots tracing back to India and a diploma from Empire Beauty School in Louisville, Kentucky, she's mastered the art of enhancing natural beauty. 
+            Poonam not only excels in her craft but also manages her role as a devoted single mother of 2. 
+            </p>
+            <p>
+            With almost 2 years of running her own business, Poonam's expertise shines through in her diverse range of treatments: from personalized facials addressing specific concerns to blissful relaxation therapies. 
+            Poonam's genuine commitment to client satisfaction ensures a client's experience is not only transformative but deeply rejuvenating. 
+            </p>
         </div>
-    </div>
-
-    <div class = "about_background">
-       <div id = "about_background_title">
-            <h1>About</h1>
-       </div>
-       <div class = "about_box">
-            <div id="profile_photo"></div>
-            <div id="bio">
-                <p>
-                As an esthetician with over 17 years of experience, Poonam brings her passion for skincare to every treatment. 
-                With roots tracing back to India and a diploma from Empire Beauty School in Louisville, Kentucky, she's mastered the art of enhancing natural beauty. 
-                Poonam not only excels in her craft but also manages her role as a devoted single mother of 2. 
-                </p>
-                <p>
-                With almost 2 years of running her own business, Poonam's expertise shines through in her diverse range of treatments: from personalized facials addressing specific concerns to blissful relaxation therapies. 
-                Poonam's genuine commitment to client satisfaction ensures a client's experience is not only transformative but deeply rejuvenating. 
-                </p>
-            </div>
-       </div>
-    </div>
-
-    <div class = "services_background">
-        <div id = "services_background_title">
-            <h1>Services</h1>
+        <div class="about-image">
+            <img src="Poonam_prof.JPG" alt="Spa Image">
         </div>
-        <div class = "dropdown_box">
-            <div id = dropdown1>
-                <label for="touch1"><span>Facial</span></label>
-                <input type="checkbox" id="touch1">
-                <ul class="slide">
-                    <div class="wrap-content">
-                        <ul>
-                            <li>Signature Facial - 1 Hour - $97</li>
-                            <li>Classic Enzyme Facial - 1 Hour - $110</li>
-                            <li>Dermaplane Rejuvinate Facial - 1 Hour - $126</li>
-                            <li>Signature With Microderm Facial - 1 Hour - $136</li>
-                            <li>Glycolic/Retinol Peel - 30 Minutes - $75</li>
-                            <li>Microdermabrasion - 30 Minutes - $75</li>
-                            <li>Dermaplane - 30 Minutes - $75</li>
-                            <li>Microneedling Facial - 75 Minutes - $255</li>
-                            <li>Age Defense Facial - 1 Hour - $119</li>
-                            <li>Acne Control Facial - 1 Hour - $119</li>
-                            <li>Hydrodermabrasion Facial - 1 Hour - $170</li>
-                        </ul>
-                        <div id="room_pic"></div>
-                    </div>
-                </ul>
-            </div>
-            <div id= "dropwdown2">
-                <label for="touch2"><span>Body</span></label>
-                <input type="checkbox" id="touch2">
-                <ul class="slide">
-                  <li>Farm House Fresh Body Scrub (farm house fresh product) - 1 Hour - $97</li>
-                  <li>Farm House Fresh Relaxation Treatment (farm house fresh product) - 90 Minutes - $145</li>
-                  <li>Skin Classic (skin classic machine) Skin Tag Removal - 15 Minutes - $85</li>
-                  <li>Body Contouring Treatment (lymphatic drainage, cellulite reduction, collagen infirmness, lose inches) - 50 Minutes - $190</li>
-                </ul>
-            </div>
-            <div id= "dropwdown3">
-                <label for="touch3"><span>Waxing</span></label>
-                <input type="checkbox" id="touch3">
-                <ul class="slide">
-                    <div class="wrap-content">
-                        <ul>
-                            <li>Full Leg Wax - 45 Minutes - $85</li>
-                            <li>Half Leg Wax - 30 Minutes - $50</li>
-                            <li>Full Arm Wax - 30 Minutes - $60</li>
-                            <li>Underarm Wax - 15 Minutes - $25</li>
-                        </ul>
-                        <div id="room_pic", style="background-image: url('interior2.JPG');"></div>
-                    </div>
-                </ul>
-            </div>
-            <div id= "dropwdown4">
-                <label for="touch4"><span>Threading</span></label>
-                <input type="checkbox" id="touch4">
-                <ul class="slide">
-                  <li>Brow Threading - 15 Minutes - $22</li>
-                  <li>Brow+Upper Lip Threading - 20 Minutes - $39</li>
-                  <li>Threading for Face - 30 Minutes - $45</li>
-                </ul>
-            </div>
-            <div id= "dropwdown5">
-                <label for="touch5"><span>Tinting</span></label>
-                <input type="checkbox" id="touch5">
-                <ul class="slide">
-                  <li>Brow Tinting - 15 Minutes - $22</li>
-                  <li>Lash Lift+Tint - 40 Minutes - $75</li>
-                </ul>
-            </div>
-            <div id= "dropwdown6">
-                <label for="touch6"><span>Pedicure</span></label>
-                <input type="checkbox" id="touch6">
-                <ul class="slide">
-                  <li>Pedicure - 45 Minutes - $55</li>
-                </ul>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">Services</h2>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Facial</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Signature Facial - 1 Hour - $97</p>
+                    <p>Classic Enzyme Facial - 1 Hour - $110</p>
+                    <p>Dermaplane Rejuvenate Facial - 1 Hour - $126</p>
+                    <p>Signature With Microderm Facial - 1 Hour - $136</p>
+                    <p>Glycolic/Retinol Peel - 30 Minutes - $75</p>
+                    <p>Microdermabrasion - 30 Minutes - $75</p>
+                    <p>Dermaplane - 30 Minutes - $75</p>
+                    <p>Microneedling Facial - 75 Minutes - $255</p>
+                    <p>Age Defense Facial - 1 Hour - $119</p>
+                    <p>Acne Control Facial - 1 Hour - $119</p>
+                    <p>Hydrodermabrasion Facial - 1 Hour - $170</p>
+                </div>
+                <img src="interior1.jpg" alt="Facial Service" class="service-image">
             </div>
         </div>
-    </div>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Body</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Farm House Fresh Body Scrub - 1 Hour - $97</p>
+                    <p>Farm House Fresh Relaxation Treatment - 90 Minutes - $145</p>
+                    <p>Skin Classic Skin Tag Removal - 15 Minutes - $85</p>
+                    <p>Body Contouring Treatment - 50 Minutes - $190</p>
+                </div>
+                <img src="interior2.jpg" alt="Body Service" class="service-image">
+            </div>
+        </div>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Waxing</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Full Leg Wax - 45 Minutes - $85</p>
+                    <p>Half Leg Wax - 30 Minutes - $50</p>
+                    <p>Full Arm Wax - 30 Minutes - $60</p>
+                    <p>Underarm Wax - 15 Minutes - $25</p>
+                </div>
+            </div>
+        </div>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Threading</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Brow Tinting - 15 Minutes - $22</p>
+                    <p>Lash Lift+Tint - 40 Minutes - $75</p>
+                </div>
+            </div>
+        </div>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Tinting</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Brow Threading - 15 Minutes - $22</p>
+                    <p>Brow+Upper Lip Threading - 20 Minutes - $39</p>
+                    <p>Threading for Face - 30 Minutes - $45</p>
+                </div>
+            </div>
+        </div>
+        <div class="service">
+            <h3 onclick="toggleService(this)">Pedicure</h3>
+            <div class="service-details">
+                <div class="service-list">
+                    <p>Pedicure - 45 Minutes - $55</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="pic"></div>
-
-    <div id="Contact">
-        <ul>
-            <li style="border-left: none;">Text or Call <br> 502-417-7137</li>
-            <li>Email <br> <a href="mailto:poonamwason@yahoo.com">poonamwason@yahoo.com</a></li>
-            <li>Based In <br> 11400 Main Street, Middletown, KY 40243 - Self Care Studio Suite #102</li>
-
-        </ul>
-    </div>
-    <!--then you gotta focus on nav bar and touchups for the webpage-->
-    <!--get second opinions and see what you can do to make it better-->
-
-
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title" style="color: white;">Contact</h2>
+        <p>Phone: (502) 417-7137</p>
+        <p>Location: 11400 Main Street, Middletown, KY 40243 - Self Care Studio Suite #102</p>
+        <p>Email: <a href="mailto:poonamwason@yahoo.com" class="email-link">poonamwason@yahoo.com</a></p>
+    </section>
 </body>
+</html>
