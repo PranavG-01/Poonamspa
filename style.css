@@ -137,6 +137,18 @@ header nav ul li a {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stacks the items vertically */
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .about-description, .about-image {
+        margin: 10px 0; /* Adjust margins for better spacing */
+    }
+}
+
 .about-description p {
     font-size: 24px;
 }
