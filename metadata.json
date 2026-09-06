@@ -1,0 +1,7 @@
+{
+  "name": "Pure Luxury Spa by Poonam",
+  "description": "Pure Luxury Spa (poonamspa.com) by Poonam in Louisville, KY - offering specialized facials, body treatments, threading, waxing, lash lift, and pedicures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
