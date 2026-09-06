@@ -1,12 +1,15 @@
 import React from 'react';
 import { Phone, MapPin, Clock, Calendar, Sparkles, MessageSquare, ShieldCheck, HeartHandshake } from 'lucide-react';
-import { SPA_INFO } from '../data/spaData';
+import { SPA_INFO, SPA_SERVICES } from '../data/spaData';
 
 interface BookingContactSectionProps {
   preselectedServiceId?: string;
 }
 
-export const BookingContactSection: React.FC<BookingContactSectionProps> = () => {
+export const BookingContactSection: React.FC<BookingContactSectionProps> = ({ preselectedServiceId }) => {
+  const preselectedService = preselectedServiceId
+    ? SPA_SERVICES.find((s) => s.id === preselectedServiceId)
+    : undefined;
   return (
     <section id="contact" className="py-20 bg-[#FAF8F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -32,7 +35,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = () =>
           <div className="bg-[#2C2623] text-[#FAF8F5] rounded-2xl p-8 sm:p-12 shadow-md relative overflow-hidden text-center sm:text-left">
             <div className="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-[#B38867]/20 blur-2xl pointer-events-none" />
             
-            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-8">
+                <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-8">
               <div className="space-y-3 max-w-xl">
                 <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold flex items-center justify-center sm:justify-start gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
@@ -44,6 +47,12 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = () =>
                 <p className="text-sm text-[#D4C8BC] leading-relaxed">
                   Have questions regarding treatments, personalized skin advice, or want to reserve your preferred date and time? Reach out directly to Poonam.
                 </p>
+                    {preselectedService && (
+                      <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-[#FAF8F5]">
+                        <span className="text-[11px] font-bold">Selected for Booking:</span>
+                        <span className="italic">{preselectedService.name}</span>
+                      </div>
+                    )}
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Leaf, Shield, UserCheck, Droplets, Gem } from 'lucide-react';
+import { SPA_INFO } from '../data/spaData';
 
 export const ExperienceSection: React.FC = () => {
   const experiences = [
@@ -96,10 +97,10 @@ export const ExperienceSection: React.FC = () => {
                 Request Appointment
               </a>
               <a
-                href="tel:559-284-7298"
+                href={`tel:${SPA_INFO.phone}`}
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-[#FAF8F5] border border-white/20 text-xs font-semibold uppercase tracking-wider rounded transition-all"
               >
-                Call (559) 284-7298
+                Call {SPA_INFO.phoneFormatted}
               </a>
             </div>
           </div>

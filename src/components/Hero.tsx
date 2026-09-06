@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = () => {
               className="w-full sm:w-auto sm:hidden flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent text-[#2C2623] border border-[#B38867]/40 text-xs font-semibold uppercase tracking-wider rounded"
             >
               <Phone className="w-4 h-4 text-[#B38867]" />
-              <span>Call (559) 284-7298</span>
+              <span>Call {SPA_INFO.phoneFormatted}</span>
             </a>
           </div>
 

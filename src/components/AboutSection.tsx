@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, GraduationCap, Sparkles, CheckCircle2, Heart, Clock } from 'lucide-react';
+import { SPA_INFO } from '../data/spaData';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const AboutSection: React.FC = () => {
                 {/* Profile Picture Frame */}
                 <div className="relative mx-auto mb-6 w-48 h-60 sm:w-56 sm:h-72 rounded-xl overflow-hidden shadow-md border-2 border-[#D4C4B5]/60 group">
                   <img
-                    src="/assets/poonam_profile.jpg"
+                    src="src/assets/images/poonam_profile.jpg"
                     alt="Poonam - Master Esthetician & Founder of Pure Luxury Spa"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -147,10 +148,10 @@ export const AboutSection: React.FC = () => {
                 <span>Book Appointment</span>
               </a>
               <a
-                href={`tel:559-284-7298`}
+                href={`tel:${SPA_INFO.phone}`}
                 className="inline-flex items-center gap-2 px-5 py-3 border border-[#D4C6B8] hover:border-[#B38867] text-[#2C2623] hover:bg-[#F2ECE4] text-xs font-semibold uppercase tracking-wider rounded transition-all"
               >
-                <span>Call (559) 284-7298</span>
+                <span>Call {SPA_INFO.phoneFormatted}</span>
               </a>
             </div>
 

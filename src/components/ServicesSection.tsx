@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Clock, Sparkles, Check, ArrowRight, Tag } from 'lucide-react';
-import { SPA_SERVICES } from '../data/spaData';
+import { SPA_SERVICES, SPA_INFO } from '../data/spaData';
 import { ServiceCategory, SpaService } from '../types';
 
 interface ServicesSectionProps {
@@ -194,10 +194,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             Poonam offers personalized consultations to recommend the ideal regimen for your skin goals.
           </p>
           <a
-            href="tel:559-284-7298"
+            href={`tel:${SPA_INFO.phone}`}
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B38867] hover:text-[#9E6B65] transition-colors"
           >
-            <span>Call / Text Directly: (559) 284-7298</span>
+            <span>Call / Text Directly: {SPA_INFO.phoneFormatted}</span>
           </a>
         </div>
 
