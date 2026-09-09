@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Webpage-Created-for-a-Spa-Business/',
+    base: '/',
     
     plugins: [react(), tailwindcss()],
     
